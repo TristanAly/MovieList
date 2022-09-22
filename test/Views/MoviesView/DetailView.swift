@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     
     var movies: MovieModel
-    @State var isLike = false
+    @State var isLike: Bool = false
     
     var body: some View {
         ScrollView{
