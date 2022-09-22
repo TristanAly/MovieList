@@ -20,6 +20,7 @@
 		17F6DC0928DB17AC007CBD0F /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6DC0828DB17AC007CBD0F /* UsersModel.swift */; };
 		17F6DC0D28DB3B78007CBD0F /* PictureProfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6DC0C28DB3B78007CBD0F /* PictureProfil.swift */; };
 		17F6DC0F28DB3D85007CBD0F /* ChangePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6DC0E28DB3D85007CBD0F /* ChangePicture.swift */; };
+		17F6DC1128DB5BC2007CBD0F /* ImageMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6DC1028DB5BC2007CBD0F /* ImageMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		17F6DC0828DB17AC007CBD0F /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		17F6DC0C28DB3B78007CBD0F /* PictureProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureProfil.swift; sourceTree = "<group>"; };
 		17F6DC0E28DB3D85007CBD0F /* ChangePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePicture.swift; sourceTree = "<group>"; };
+		17F6DC1028DB5BC2007CBD0F /* ImageMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				17C163AA28D9E71500CE0960 /* MovieList.swift */,
 				17C163A228D9B1A600CE0960 /* DetailView.swift */,
 				17C163A628D9CA4700CE0960 /* ModalView.swift */,
+				17F6DC1028DB5BC2007CBD0F /* ImageMovie.swift */,
 			);
 			path = MoviesView;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				17F6DC0F28DB3D85007CBD0F /* ChangePicture.swift in Sources */,
 				176B51D128D9057F001924C9 /* ContentView.swift in Sources */,
 				176B51CF28D9057F001924C9 /* testApp.swift in Sources */,
+				17F6DC1128DB5BC2007CBD0F /* ImageMovie.swift in Sources */,
 				17C163A328D9B1A600CE0960 /* DetailView.swift in Sources */,
 				17F6DC0D28DB3B78007CBD0F /* PictureProfil.swift in Sources */,
 				17C1639F28D9AEB200CE0960 /* ProfilView.swift in Sources */,

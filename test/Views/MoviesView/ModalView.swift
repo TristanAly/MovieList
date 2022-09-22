@@ -14,10 +14,11 @@ struct ModalView: View {
     @State var author = ""
     @State var date = ""
     @State var description = "Pitch"
-    @State var categorie = "Drame"
+    //    @State var categorie = ""
     @State var colorPitch = false
-    var categorieArray = ["Drame", "Romantique", "Horreur", "Action"]
+    @State var selectedType: Gender = .Drame
     @Environment(\.presentationMode) var presentationMode
+    //    @Binding var selectedNewImage: UIImage
     
     var body: some View {
         VStack{
@@ -26,16 +27,16 @@ struct ModalView: View {
                 titleSheet
                 ClosedSheet
             }.padding()
-                formAddNewMovie
+            formAddNewMovie
             Spacer()
-                buttonSave
+            buttonSave
         }
     }
 }
 
 struct ModalView_Previews: PreviewProvider {
     static var previews: some View {
-//        ModalView(movieModel: .constant([movieModel[0]))
+        //        ModalView(movieModel: .constant([movieModel[0]))
         MovieList()
     }
 }
@@ -64,6 +65,9 @@ extension ModalView {
                     TextField("Réalisateur", text: $author)
                     TextField("Année de sortie", text: $date)
                 }
+                Section("Image") {
+                    ImageMovie()
+                }
                 Section("Synopsis"){
                     TextEditor(text: $description)
                         .foregroundColor(colorPitch ? .black : .gray)
@@ -76,18 +80,20 @@ extension ModalView {
                         }
                 }
                 Section("Categories"){
-                    Picker("\(categorie)", selection: $categorie) {
-                        ForEach(categorieArray, id: \.self) {
-                            Text($0)
+                    Picker("", selection: $selectedType) {
+                        ForEach(Gender.allCases, id: \.self) { gender in
+                            Text(gender.rawValue)
                             
                         }
                     }
-                    .foregroundColor(.red)
-                    .pickerStyle(.menu)
+                    .foregroundColor(.red).pickerStyle(.menu)
+                    .labelsHidden()
                 }
-            }.font(.title3)
+            }
         }
+        .font(.title3)
     }
+    
     
     
     private var buttonSave: some View {
@@ -100,12 +106,20 @@ extension ModalView {
     }
     
     func addNewMovie() {
-        movieModel.append(MovieModel(image: "Revenant", title: title, author: author, date: Int(date) ?? 0, categorie: categorie, description: description))
+        movieModel.append(MovieModel(image: "Revenant" , title: title, author: author, date: Int(date) ?? 0, categorie: selectedType , description: description))
     }
     func dismissModal() {
         presentationMode.wrappedValue.dismiss()
     }
-    func deleteMovie() {
-        //
-    }
 }
+
+//extension UIImage {
+//    func toString() -> String? {
+//
+//        let pngData = self.pngData()
+//
+//        //let jpegData = self.jpegData(compressionQuality: 0.75)
+//
+//        return pngData?.base64EncodedString()
+//    }
+//}

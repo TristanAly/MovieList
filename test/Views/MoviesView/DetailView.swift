@@ -49,7 +49,7 @@ extension DetailView {
     
     private var descriptionMovie: some View {
         VStack(alignment: .center){
-            Text(movies.categorie)
+            Text(movies.categorie.rawValue.capitalized)
                 .padding()
             Text(movies.description)
                 .multilineTextAlignment(.center)
@@ -80,4 +80,5 @@ extension DetailView {
         }
         .padding()
     }
+    
 }
