@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+
+enum favorites: String {
+    case like = "heart.fill"
+    case notLike = "heart"
+}
+
 struct DetailView: View {
     
     var movies: MovieModel

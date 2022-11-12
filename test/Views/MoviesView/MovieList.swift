@@ -18,9 +18,9 @@ struct MovieList: View {
     
     var body: some View {
         NavigationView{
-            
+            VStack{
                 listMovie
-           
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button{
@@ -44,6 +44,7 @@ struct MovieList: View {
 struct MovieList_Previews: PreviewProvider {
     static var previews: some View {
         MovieList()
+            
     }
 }
 
@@ -77,6 +78,8 @@ extension MovieList {
             .searchable(text: $search)
         }
     }
+    
+    // search movie in the list
     var searchResults: [MovieModel] {
             if search.isEmpty {
                 return movieModel
@@ -91,4 +94,4 @@ extension MovieList {
         // delete the objects here
         movieModel.remove(atOffsets: offsets)
     }
- }
+}

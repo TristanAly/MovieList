@@ -113,13 +113,13 @@ extension ModalView {
     }
 }
 
-//extension UIImage {
-//    func toString() -> String? {
-//
-//        let pngData = self.pngData()
-//
-//        //let jpegData = self.jpegData(compressionQuality: 0.75)
-//
-//        return pngData?.base64EncodedString()
-//    }
-//}
+extension UIImage {
+    func toString() -> String? {
+
+        let pngData = self.pngData()
+
+        //let jpegData = self.jpegData(compressionQuality: 0.75)
+
+        return pngData?.base64EncodedString()
+    }
+}
