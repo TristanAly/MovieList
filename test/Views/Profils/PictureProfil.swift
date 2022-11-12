@@ -22,12 +22,11 @@ struct PictureProfil: View {
                    openCameraRoll = true
                    
                }, label: {
-                   VStack{
+                   ZStack{
+                       Image("trycia")
+                           .profilPhotoMod()
                        if changePhoto {
                            Image(uiImage: selectedImage)
-                               .profilPhotoMod()
-                       }else {
-                           Image("trycia")
                                .profilPhotoMod()
                        }
                    }.background(Circle().stroke(.red, lineWidth: 5).frame(width: 200, height: 150))
@@ -39,6 +38,11 @@ struct PictureProfil: View {
                        .background(Circle().fill(Color.gray))
                        .offset(x: -55)
            }
+//           .onAppear{
+//               if selectedImage == nil {
+//                   Image(uiImage: "trycia")
+//               }
+//           }
            .sheet(isPresented: $openCameraRoll) {
                ImagePicker(selectedPhoto: $selectedImage, sourceType: .photoLibrary)
            }
@@ -61,3 +65,4 @@ extension Image{
             .clipShape(Circle())
     }
 }
+

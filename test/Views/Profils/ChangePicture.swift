@@ -15,6 +15,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 // Controleur de la librairie + la source quand on va prendre une image ou un media type
     @Binding var selectedPhoto: UIImage
     @Environment(\.presentationMode) var isPresented
+    
     var sourceType: UIImagePickerController.SourceType
     
     
