@@ -102,6 +102,7 @@ extension ModalView {
                 addNewMovie()
                 dismissModal()
             }
+            .foregroundColor(.red)
         }
     }
     
